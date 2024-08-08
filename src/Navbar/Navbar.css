@@ -55,8 +55,7 @@
     height: auto;
 }
 
-.link-item:hover,
-.link-item-contact:hover {
+.link-item:hover {
     transform: scale(1.25);
 }
 
@@ -65,7 +64,106 @@
     background-color: #FF6F61;
     color: #121212;
     border-radius: 100px;
+    position: relative;
 }
+
+.contact-dropdown {
+    position: absolute;
+    top: 35px;
+    right: 0;
+    width: auto;
+    height: auto;
+    padding: 5px 5px;
+    background-color: #2C2C3F;
+    border: 2px solid #FF6F61;
+    border-radius: 10px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.link-item-contact:hover .contact-dropdown,
+.contact-dropdown:hover {
+    display: flex;
+}
+
+.card {
+    width: fit-content;
+    height: fit-content;
+    background-color: #2C2C3F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 25px;
+    gap: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+  }
+  
+  .socialContainer {
+    width: 40px;
+    height: 50px;
+    background-color: rgb(103, 103, 103);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: 1.2s;
+    border-radius: 15px 0 15px 0px;
+  }
+
+  /* instagram*/
+  .containerOne:hover {
+    background-color: #d62976;
+    transition-duration: 1.2s;
+  }
+
+  /* twitter*/
+  .containerTwo:hover {
+    background-color: #00acee;
+    transition-duration: 1.2s;
+  }
+
+  /* linkdin*/
+  .containerThree:hover {
+    background-color: #0072b1;
+    transition-duration: 1.2s;
+  }
+
+  /* Whatsapp*/
+  .containerFour:hover {
+    background-color: #f90101;
+    transition-duration: 1.2s;
+  }
+  
+  .socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: 1.2s;
+  }
+  
+  .socialSvg {
+    width: 17px;
+  }
+  
+  .socialSvg path {
+    fill: rgb(255, 255, 255);
+  }
+  
+  .socialContainer:hover .socialSvg {
+    animation: slide-in-top 1.2s both;
+  }
+  
+  @keyframes slide-in-top {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }  
 
 @media (max-width: 600px) {
     .link-item,

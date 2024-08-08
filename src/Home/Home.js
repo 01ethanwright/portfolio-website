@@ -14,7 +14,7 @@ function Home() {
                     <p>
                         I'm a recent graduate from West Virginia University looking for a job! 
                         I have an interest with working in Embedded Systems, but I would enjoy 
-                        working any type of Software Engineering Position!
+                        working any type of Software Engineering Position.
                     </p>
                     <p>
                         Please feel free to contact me!

@@ -1,0 +1,133 @@
+.AboutMe {
+    height: auto;
+    width: 100vw;
+    background-color: #121212;
+    padding-top: 125px;
+}
+
+.brief-intro,
+.skills,
+.experiences {
+    height: auto;
+    width: 70vw;
+    margin: auto;
+    background-color: #2C2C3F;
+    color: #E0E0E0;
+    padding: 20px;
+    border: 2px double #FF6F61;
+    border-radius: 50px;
+    margin-bottom: 25px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 1s forwards;
+}
+
+hr {
+    height: 0px;
+    border-width: 1px;
+}
+
+.resume-download {
+    padding-top: 25 px;
+    padding-bottom: 50px;
+    animation: slideIn 1s forwards;
+    opacity: 0;
+    transform: translateX(20px);
+}
+
+.highlight {
+    font-weight: bold;
+}
+
+.brief-intro {
+    animation-delay: 0.5s;
+}
+
+.skills {
+    animation-delay: 1.5s;
+}
+
+.experiences {
+    animation-delay: 2.5s;
+}
+
+.blimp-section {
+    display: flex;
+}
+
+.experiences-img {
+    width: 20vw;
+    margin: 10px;
+    margin-top: -10px;
+}
+
+.resume-download {
+    animation-delay: 3.5s;
+}
+
+.Download-button {
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 17px;
+    padding: 12px 20px;
+    color: white;
+    background: #FF6F61;
+    border: none;
+    box-shadow: 0 0.7em 1.5em -0.5em rgba(59, 48, 78, 0.527);
+    letter-spacing: 0.05em;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    margin: auto;
+  }
+  
+  .Download-button svg {
+    margin-right: 8px;
+    width: 25px;
+  }
+  
+  .Download-button:hover {
+    box-shadow: 0 0.5em 1.5em -0.5em rgba(88, 71, 116, 0.627);
+  }
+  
+  .Download-button:active {
+    box-shadow: 0 0.3em 1em -0.5em rgba(88, 71, 116, 0.627);
+  }
+  
+  .Download-button::before {
+    content: "";
+    width: 4px;
+    height: 40%;
+    background-color: white;
+    position: absolute;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    left: 0;
+    transition: all 0.2s;
+  }
+  
+  .Download-button::after {
+    content: "";
+    width: 4px;
+    height: 40%;
+    background-color: white;
+    position: absolute;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    right: 0;
+    transition: all 0.2s;
+  }
+  
+  .Download-button:hover::before,
+  .Download-button:hover::after {
+    height: 60%;
+  }  
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
