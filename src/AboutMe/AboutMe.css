@@ -1,8 +1,9 @@
 .AboutMe {
     height: auto;
-    width: 100vw;
+    width: 100%;
     background-color: #121212;
     padding-top: 125px;
+    overflow-x:auto;
 }
 
 .brief-intro,
@@ -44,11 +45,11 @@ hr {
 }
 
 .skills {
-    animation-delay: 1.5s;
+    animation-delay: 1s;
 }
 
 .experiences {
-    animation-delay: 2.5s;
+    animation-delay: 1.5s;
 }
 
 .blimp-section {
@@ -62,7 +63,7 @@ hr {
 }
 
 .resume-download {
-    animation-delay: 3.5s;
+    animation-delay: 2s;
 }
 
 .Download-button {

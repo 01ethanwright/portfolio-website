@@ -25,7 +25,7 @@ function AboutMe() {
                 </p>
                 <p>
                     When it comes to my programming journey, I also like to follow that same mentality of pushing myself to achieve new 
-                    heights. I have a couple hard projects in mind I would like to begin working on and vlogging, to upload to YouTube.
+                    heights. I have a couple hard projects in mind I would like to begin working on and vlogging to also upload to YouTube.
                 </p>
             </div>
             <div className='skills'>
