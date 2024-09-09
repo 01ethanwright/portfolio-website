@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { logEvent } from "firebase/analytics";
+import { analytics } from '../App';
 import './Projects.css';
 
 function RepoCard({name, description, languages_url, pushed_at, url}) {
@@ -15,10 +17,16 @@ function RepoCard({name, description, languages_url, pushed_at, url}) {
             }
         };
 
+        const logView = () => {
+            logEvent(analytics, "view_projects");
+        }
+
         fetchLanguages();
-    }, [languages_url])
+        logView();
+    }, [languages_url]);
     
     const handleOnClick = () => {
+        logEvent(analytics, `repo_clicked_${name}`);
         window.open(url, '_blank');
     }
     

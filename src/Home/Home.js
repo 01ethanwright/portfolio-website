@@ -1,7 +1,18 @@
 import './Home.css';
 import headshot from './headshot.jpg';
+import { logEvent } from 'firebase/analytics';
+import { analytics } from '../App';
+import { useEffect, useState } from 'react';
 
 function Home() {
+    useEffect(() => {
+        const logView = () => {
+            logEvent(analytics, 'view_homepage');
+        };
+
+        logView();
+    }, []);
+
     return (
         <div className='Home'>
             <div className='img-section'></div>
@@ -13,7 +24,7 @@ function Home() {
                     <h1>Ethan Wright</h1>
                     <p>
                         I'm a recent graduate from West Virginia University looking for a job! 
-                        I have an interest with working in Embedded Systems, but I would enjoy 
+                        I have an interest with working in Embedded Systems, but I would thoroughly enjoy 
                         working any type of Software Engineering Position.
                     </p>
                     <p>

@@ -126,6 +126,17 @@ hr {
     height: 60%;
   }  
 
+@media (max-width: 600px) {
+  .blimp-section {
+    flex-direction: column;
+  }
+
+  .experiences-img {
+    width: 50vw;
+    margin: auto;
+  }
+}
+
 @keyframes slideIn {
     to {
         opacity: 1;
